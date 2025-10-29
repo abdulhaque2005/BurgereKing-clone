@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.maincontainer {
+    height: auto;
+    width: 100vw;
+    background-color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+
+}
+
+.navbar {
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    top: 0;
+    background-color: white;
+    /* border: 1px solid; */
+    padding: 0.1rem;
+    font-size:large;
+    justify-content: space-around;
+    position: fixed;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 1000;
+}
+
+
+
+
+
+.maincontainer::before {
+    content: "";
+    display: block;
+    height: 8vh;
+}
+
+.halfnav {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.delivery {
+    color: rgb(121, 117, 117);
+}
+
+.dine {
+    color: #6B3E2F;
+    font-weight: bold;
+}
+
+.box {
+    height: 5vh;
+    width: 17vw;
+    border-radius: 2rem;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    font-size: large;
+    background-color: rgb(243, 242, 242);
+    padding: 0.3rem;
+}
+
+.line {
+    height: 5vh;
+    width: 0.01vw;
+    background-color: rgb(124, 122, 122);
+}
+
+.fullnav {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.box1 {
+    display: flex;
+    gap: 0.4rem;
+    align-self: center;
+}
+
+.box-n{
+    display: flex;
+    gap: 0.4rem;
+    align-self: center;
+   color: #6B3E2F;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box1 a {
+    color: rgb(154, 151, 151);
+    font-size: larger;
+}
+
+.container-1 {
+    max-width:100vw;
+    margin: 0 auto;
+    padding: 1.4rem;
+}
+
+/* --- Search Bar --- */
+.search-bar-container {
+    padding: 1.3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    width: 100%; 
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 0.3rem 1rem;
+    border: 1px solid #ddd;
+    align-items: center;
+}
+
+.search-icon {
+    color: #777;
+    margin-right: 0.7rem;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    padding: 0.7rem 0;
+    font-size:1rem;
+    outline: none;
+}
+
+.detect-location {
+    background: none;
+    border: none;
+    color: #c90000; /* Burger King Red */
+    font-weight: 500;
+    padding: 0.7rem 0 0.7rem 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 03rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    border-left: 1px solid #eee;
+    margin-left:0.9rem;
+}
+
+/* --- Store List and Cards --- */
+.store-list {
+    display: flex;
+    flex-direction: column;
+    gap:0.9rem;
+}
+
+.store-card {
+    background-color: #fff;
+    padding: 1.3rem 1.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+}
+
+.store-header {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-bottom: 0.4rem;
+}
+
+.store-name {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-icons .icon {
+    font-size: 1.4rem;
+    color: #999;
+}
+
+.store-details {
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.store-address {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 0.7rem;
+}
+
+.store-status {
+    display: flex;
+    gap: 1.3rem;
+    margin-bottom: 0.9rem;
+    font-size: 14px;
+}
+
+.open-now {
+    color: green;
+    font-weight: 500;
+}
+
+.distance {
+    color:black;
+}
+
+.card-divider {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 0.9rem 0;
+}
+
+.service-options {
+    display: flex;
+    gap: 2.4rem;
+    justify-content: space-between;
+}
+
+.option {
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap:0.3rem;
+    padding:0.3rem 0.7rem;
+}
+
+.option .icon {
+    font-size: 1rem;
+    color: #c90000;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .halfnav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .fullnav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .box {
+    width: 80vw;
+    justify-content: center;
+  }
+.maincontainer::before {
+    content: "";
+    display: block;
+    height: 60vh;
+}
+.store-card {
+        padding: 18px;
+    }
+    .store-name {
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+     .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .halfnav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .fullnav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .box {
+    width: 80vw;
+    justify-content: center;
+  }
+.maincontainer::before {
+    content: "";
+    display: block;
+    height: 60vh;
+}
+ .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+    .detect-location {
+        border-left: none;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+    .store-card {
+        padding: 15px;
+        gap: 8px;
+    }
+    .store-name {
+        font-size: 15px;
+    }
+    .store-details, .store-address, .store-status, .option {
+        font-size: 13px;
+    }
+.search-bar-container{
+      height: 70%;  
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .halfnav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .fullnav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .box {
+    width: 80vw;
+    justify-content: center;
+
+  }
+   .store-card{
+        padding: 12px;
+    }
+    .store-name {
+        font-size: 14px;
+    }
+    .store-details, .store-address, .store-status, .option {
+        font-size: 12px;
+    }
+    .option .icon {
+        font-size: 14px;
+    }
+.maincontainer::before {
+    content: "";
+    display: block;
+    height: 55vh;
+}
+  .search-bar {
+        padding: 8px;
+    }
+    .search-bar input[type="text"] {
+        font-size: 14px;
+    }
+    .detect-location {
+        font-size: 13px;
+    }
+    .service-options{
+        /* justify-content: space-between; */
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .search-bar-container{
+      height: 40%;  
+    }
+}
+
+
+
